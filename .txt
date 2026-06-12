@@ -1,0 +1,1 @@
+Eu estava pensando sobre a minha dificuldade em escrever a regra de negocios para calcular imposto e percebi que no meu dia a dia como programador, acredito que muitas vezes eu não precisarei escrever a regra de negócio do zero, mas sim entender. Faz sentido isso?
