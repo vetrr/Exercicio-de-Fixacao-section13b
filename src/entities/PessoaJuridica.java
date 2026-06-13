@@ -10,8 +10,19 @@ public final class PessoaJuridica extends Pessoa{
 
     @Override
     public Double calcularImposto() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularImposto'");
+        Double impostoBase= rendaAnual*0.16;
+
+        if (qtdFuncionarios>10) {
+            impostoBase= rendaAnual*0.14;
+        }
+
+        return impostoBase;
+    }
+
+    @Override
+    public String toString() {
+        calcularImposto();
+        return nome+" $ "+String.format("%.2f", calcularImposto());
     }
 
 }

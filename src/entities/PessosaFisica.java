@@ -4,7 +4,6 @@ public final class PessosaFisica extends Pessoa{
     protected final Double RENDAMIN=20000.00;
 
     protected Double gastoSaude;
-    protected Double impostoPagar;
 
     
         public PessosaFisica(String nome, Double rendaAnual, Double gastoSaude) {
@@ -30,14 +29,14 @@ public final class PessosaFisica extends Pessoa{
            impostoBase -= desconto;
         }
         
-        impostoPagar=impostoBase;
         return impostoBase;
     }
 
 
     @Override
     public String toString() {
-        return nome+" $ "+ impostoPagar;
+        calcularImposto();
+        return nome+" $ "+String.format("%.2f", calcularImposto());
     }
 
 }
