@@ -6,7 +6,7 @@ public final class PessosaFisica extends Pessoa{
     protected Double gastoSaude;
 
     
-        public PessosaFisica(String nome, Double rendaAnual, Double gastoSaude) {
+    public PessosaFisica(String nome, Double rendaAnual, Double gastoSaude) {
         super(nome, rendaAnual);
         this.gastoSaude=gastoSaude;
     }

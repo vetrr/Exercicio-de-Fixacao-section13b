@@ -20,7 +20,7 @@ public class App {
         Integer n = sc.nextInt();
 
         for(int i=0; i<n; i++){
-            System.out.println("Informações da"+(i+1)+"Pessoa");
+            System.out.println("Informações da "+(i+1)+" Pessoa");
             System.out.print("Pessoa física ou jurídica? (f/j)");
             char fj = sc.next().charAt(0);
             
@@ -40,6 +40,7 @@ public class App {
                     break;
                 case 'j':
                     System.out.print("Nome: ");
+                    sc.nextLine();
                     String nomeJu = sc.nextLine();
                     System.out.print("Renda anual: ");
                     Double rendaAnualJu = sc.nextDouble();
@@ -58,14 +59,17 @@ public class App {
 
         }
 
+        System.out.println();
+        System.out.println("Imposto pago: ");
+
+        Double impostoTotal = 0.0;
         for (Pessoa i : pessoaFouJ) {
-            
+            System.out.println(i);
+            impostoTotal += i.calcularImposto();
         }
 
-        // Pessoa pTest = new PessoaJuridica("Vitor", 40000.00, 25);
-
-        // System.out.println("IMPOSTO A SER PAGO");
-        // System.out.println(pTest.toString());
+        System.out.println();
+        System.out.println("IMPOSTO A SER PAGO: "+impostoTotal);
 
         sc.close();
     }
